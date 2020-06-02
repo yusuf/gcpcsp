@@ -48,7 +48,7 @@ The service will log all the output from cloud_sql_proxy to /var/log/gcpscp.locs
 To uninstall the service, simply run:
 ```sh
 $ service gcpscp uninstall
-csp
+```
 Note that the cloud_sql_proxy will remain in /opt/gcpscp/, also your config file will still be in /etc/gcpscp/.
 Remove these manually, along with any logs in /var/locspcpscp.lcsp
 ## Issues?
