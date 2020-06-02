@@ -1,6 +1,6 @@
 # Google Cloud SQL Proxy init.d Service
 Google Cloud provides a proxy connector that allows you to connect a MySQL/PostgresSQL client to your Google Cloud SQL instance.
-This is a daemon-friendly install script, config file and init.d service script for use on Debian/Ubuntu servers.
+This is a daemon-friendly with a install, init.d service script and for use on Debian/Ubuntu servers.
 
 To learn more about Google Cloud SQL Proxy, [check out GCP documentation](https://cloud.google.com/sql/docs/).
 
@@ -8,13 +8,13 @@ To learn more about Google Cloud SQL Proxy, [check out GCP documentation](https:
 Clone this repo (or download the archive):
 ```sh
 git clone https://github.com/yusuf/gcpcsp
-cd gcpscp
-sudo .cspstall.sh
+cd gcpcsp
+sudo ./install.sh
 ```
 This will perform the following:
   - Download the latest cloud_sql_proxy directly from Google to /opt/gcpcsp/
   - Create a default config file in /etc/gcpscp/gcpcsp.conf
-  - Install a gcpscp service script at /etc/cspt.d/gcpccsp
+  - Install a gcpscp service script at /etc/init.d/gcpccsp
 ## Configuration
 As outlined in the Google Cloud SQL Proxy instructions, you will need to set up credentials to enable you to remotely access Google Cloud SQL from your server.  The configuration requires you have a JSON-formatted private key credential file.  This file will need to be copied to a secure location somewhere on your server.  We recommend /etc/gcpscp/:
 ``csp
